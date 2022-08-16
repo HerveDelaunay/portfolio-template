@@ -14,6 +14,18 @@ module.exports = {
       sans: ['Public Sans', 'sans-serif'],
       serif: ['Ibarra Real Nova', 'serif'],
     },
+    extend: {
+      backgroundImage: {
+        'website-logo': "url('/Users/herve/Desktop/code/FrontendMentor/minimalist portfolio website/my portfolio website/src/assets/images/logo.svg')",
+        'hamburger-icon': "url('/Users/herve/Desktop/code/FrontendMentor/minimalist portfolio website/my portfolio website/src/assets/images/icons/hamburger.svg')",
+      },
+      width: {
+        '15': '3.75rem',
+      },
+      height: {
+        '3.75': '0.812rem',
+      }
+    }
   },
   plugins: [],
 }

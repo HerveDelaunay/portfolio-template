@@ -1,11 +1,13 @@
 import React from "react";
+import Header from "../Header/Header";
+import Main from "../Main/Main";
 
 const App = () => {
   return (
-    <>
-      <div className="font-sans">Test numero 1</div>
-      <div className="font-serif">Test numero 2</div>
-    </>
+    <div className="flex flex-col items-center">
+      <Header />
+      <Main />
+    </div>
   );
 };
 
