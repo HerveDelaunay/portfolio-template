@@ -25,6 +25,12 @@ module.exports = {
       height: {
         '3.75': '0.812rem',
       }
+    },
+    fontSize: {
+      'h2': ['40px', {
+        letterSpacing: '-0.36px',
+        lineHeight: '42px',
+      }],
     }
   },
   plugins: [],
