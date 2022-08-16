@@ -18,9 +18,11 @@ module.exports = {
       backgroundImage: {
         'website-logo': "url('/Users/herve/Desktop/code/FrontendMentor/minimalist portfolio website/my portfolio website/src/assets/images/logo.svg')",
         'hamburger-icon': "url('/Users/herve/Desktop/code/FrontendMentor/minimalist portfolio website/my portfolio website/src/assets/images/icons/hamburger.svg')",
+        'down-arrows': "url('/Users/herve/Desktop/code/FrontendMentor/minimalist portfolio website/my portfolio website/src/assets/images/icons/down-arrows.svg')",
       },
       width: {
         '15': '3.75rem',
+        '38': '9.5rem'
       },
       height: {
         '3.75': '0.812rem',
@@ -31,7 +33,8 @@ module.exports = {
         letterSpacing: '-0.36px',
         lineHeight: '42px',
       }],
-    }
+    },
+    
   },
   plugins: [],
 }
