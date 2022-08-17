@@ -23,10 +23,11 @@ module.exports = {
       width: {
         '15': '3.75rem',
         '38': '9.5rem',
-        'btn-w': '12.5rem'
+        'btn': '12.5rem',
       },
       height: {
         '3.75': '0.812rem',
+        'article': '38.4375rem'
       },
       inset: {
         'btn-top-center': '1.125rem',
@@ -37,8 +38,17 @@ module.exports = {
         letterSpacing: '-0.36px',
         lineHeight: '42px',
       }],
+      'btn': ['0.75rem', {
+        letterSpacing: '0.125rem',
+        lineHeight: '0.875rem'
+      }],
+      'p': ['1rem', {
+        lineHeight: '1.875rem'
+      }]
     },
-    
+    opacity: {
+      '15': '.15'
+    }
   },
   plugins: [],
 }

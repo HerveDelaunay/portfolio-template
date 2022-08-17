@@ -4,7 +4,7 @@ import Main from "../Main/Main";
 
 const App = () => {
   return (
-    <div className="flex flex-col items-center w-screen">
+    <div className="flex flex-col items-center w-full">
       <Header />
       <Main />
     </div>

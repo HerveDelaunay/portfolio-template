@@ -16,4 +16,13 @@
     letter-spacing: 0.125rem;
     color: white;
   }
+  .btn-text-black {
+    font-size: 0.75rem;
+    line-height: 0.875rem;
+    letter-spacing: 0.125rem;
+    color: black;
+  }
+  .border-opacity {
+    border-color: rgba(51, 50, 61, 0.15)
+  }
 };
