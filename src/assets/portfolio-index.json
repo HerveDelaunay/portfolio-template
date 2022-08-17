@@ -1,0 +1,22 @@
+[
+  {
+    "project-name": "Manage",
+    "project-description": "This project required me to build a fully responsive landing page to the designs provided.I used HTML5, along with CSS Grid and JavaScript for the areas that required interactivity, such as the testimonial slider.",
+    "url": "../../../assets/images/portfolio/mobile/image-portfolio-manage.jpg"
+  },
+  {
+    "project-name": "Bookmark",
+    "project-description": "This project required me to build a fully responsive landing page to the designs provided. I used HTML5, along with CSS Grid and JavaScript for the areas that required interactivity, such as the features section.",
+    "url": "../../../assets/images/portfolio/mobile/image-portfolio-bookmark.jpg"
+  },
+  {
+    "project-name": "Insure",
+    "project-description": "This was a small project which mostly consisted of HTML and CSS. I built a fully-responsive landing page. The only JavaScript this project required was to enable the toggling of the mobile navigation.",
+    "url": "../../../assets/images/portfolio/mobile/image-portfolio-insure.jpg"
+  },
+  {
+    "project-name": "Fylo",
+    "project-description": "This project was built in pure HTML and CSS. I had mobile and desktop designs to work to and built it so that it was fully-responsive. I took a mobile-first approach and used modern CSS like Flexbox and Grid for layout purposes.",
+    "url": "../../../assets/images/portfolio/mobile/image-portfolio-fylo.jpg"
+  }
+]

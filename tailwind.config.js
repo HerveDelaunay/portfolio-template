@@ -44,11 +44,12 @@ module.exports = {
         lineHeight: '0.875rem'
       }],
       'p': ['1rem', {
-        lineHeight: '1.875rem'
+        lineHeight: '1.875rem',
       }]
     },
     opacity: {
-      '15': '.15'
+      '15': '.15',
+      'p': '.8'
     }
   },
   plugins: [],
