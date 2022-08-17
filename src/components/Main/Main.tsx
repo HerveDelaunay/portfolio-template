@@ -1,4 +1,3 @@
-import React from "react";
 import imageHomepage from "../../assets/images/homepage/mobile/image-homepage-hero.jpg";
 import data from "../../assets/data.json";
 import downArrows from "../../assets/images/icons/down-arrows.svg";
