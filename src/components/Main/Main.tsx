@@ -9,11 +9,16 @@ const Main = () => {
       <section className="w-full flex flex-col ">
         <img src={imageHomepage} alt="image-homepage-hero" className="mb-6" />
         <h2 className="text-h2 mb-8 font-serif font-bold">{data.name}</h2>
-        <button type="button" className="w-52 h-12 btn1">
-          <div className="w-1/4 h-full btn2 flex justify-center items-center">
-            <img src={downArrows} alt="down-arrows" className="w-4 h-3"></img>
+        <button type="button" className="w-btn-w h-12 btn1 relative mb-24">
+          <div className="w-12 h-full btn2"></div>
+          <div className="h-full w-38 absolute top-0 left-12 flex items-center justify-center">
+            <p className="btn-text">ABOUT ME</p>
           </div>
-          <span className="w-3/4 inline-block h-full"></span>
+          <img
+            src={downArrows}
+            alt="down-arrows"
+            className="w-4 h-3 absolute left-4 top-btn-top-center"
+          ></img>
         </button>
       </section>
       <article>zgfege</article>

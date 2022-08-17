@@ -10,4 +10,10 @@
     opacity: 0.1;
     mix-blend-mode: normal;
   }
+  .btn-text {
+    font-size: 0.75rem;
+    line-height: 0.875rem;
+    letter-spacing: 0.125rem;
+    color: white;
+  }
 };

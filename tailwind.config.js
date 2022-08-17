@@ -22,10 +22,14 @@ module.exports = {
       },
       width: {
         '15': '3.75rem',
-        '38': '9.5rem'
+        '38': '9.5rem',
+        'btn-w': '12.5rem'
       },
       height: {
         '3.75': '0.812rem',
+      },
+      inset: {
+        'btn-top-center': '1.125rem',
       }
     },
     fontSize: {
