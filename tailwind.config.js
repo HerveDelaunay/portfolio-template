@@ -59,7 +59,7 @@ module.exports = {
       'h3-mobile-btn': ['2rem', {
         letterSpacing: '-0.29px',
         lineHeight: '2.25rem',
-      }],
+      }]
     },
     opacity: {
       '15': '.15',

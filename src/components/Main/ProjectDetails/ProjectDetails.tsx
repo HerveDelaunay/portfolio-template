@@ -90,9 +90,9 @@ const ProjectDetails: React.FC<Props> = ({
           />
         </section>
       </main>
-      <div className="flex flex-row w-[20.375rem] h-[9.125rem] border-t border-b border-dark-blue mb-16">
+      <div className="flex flex-row w-[20.375rem] h-[9.125rem] border-t border-b border-dark-blue border-opacity-15 mb-16">
         <button
-          className="w-1/2 h-full flex flex-col justify-center items-start border-r border-dark-blue"
+          className="w-1/2 h-full flex flex-col justify-center items-start border-r border-dark-blue border-opacity-15"
           onClick={() => handleClickPrevious()}
         >
           <img src={arrowLeft} alt="grey arrow to the left" />
