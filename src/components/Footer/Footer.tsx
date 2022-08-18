@@ -7,11 +7,11 @@ import data from "../../assets/data.json";
 const Footer: React.FC = () => {
   return (
     <>
-      <section className="mt-[7.1875rem] mb-20 w-10/12 h-[13.375rem] flex flex-col justify-between items-center">
-        <h2 className="text-h2 font-bold font-serif text-center h-[7.875rem]">
+      <section className=" mb-20 w-10/12 h-[13.375rem] flex flex-col justify-between items-center">
+        <h2 className="text-h2 font-bold font-serif text-center h-[7.875rem] text-dark-blue">
           {data["contact me"]}
         </h2>
-        <button className="w-[10.125rem] h-12 border text-btn">
+        <button className="w-[10.125rem] h-12 border text-btn text-dark-blue">
           CONTACT ME
         </button>
       </section>

@@ -11,7 +11,7 @@ const PortfolioIndex: React.FC<Props> = ({
   setProjectDetailsOpened,
   setProjectIndexOpened,
 }) => {
-  const images = [bookmarkImage, manageImage, fyloImage, insureImage];
+  const images = [manageImage, bookmarkImage, insureImage, fyloImage];
   const handleClickProject = (index: number) => {
     setProjects([...images]);
     setProjectIndex(index);
@@ -25,10 +25,12 @@ const PortfolioIndex: React.FC<Props> = ({
         <article className="w-full mb-[4.5rem]" key={index}>
           <img src={images[index]} alt="image-profile" className="w-full" />
           <div className="w-full h-[23rem] border-t border-b border-opacity mt-8 flex flex-col justify-evenly">
-            <h2 className="text-h2 font-bold font-serif">
+            <h2 className="text-h2 text-dark-blue font-bold font-serif">
               {project["project-name"]}
             </h2>
-            <p className="text-p opacity-p">{project["project-description"]}</p>
+            <p className="text-p2 text-dark-blue opacity-p">
+              {project["project-description"]}
+            </p>
             <button
               className="border w-btn h-12 btn-text-black"
               onClick={() => handleClickProject(index)}
