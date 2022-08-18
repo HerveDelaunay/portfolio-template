@@ -31,6 +31,7 @@ const Main: React.FC<Props> = ({
           setProjectDetailsOpened={setProjectDetailsOpened}
           projects={projects}
           projectIndex={projectIndex}
+          setProjectIndex={setProjectIndex}
         />
       ) : (
         <Homepage setProjectIndexOpened={setProjectIndexOpened} />

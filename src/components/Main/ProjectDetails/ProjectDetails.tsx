@@ -19,6 +19,7 @@ const ProjectDetails: React.FC<Props> = ({
   setProjectDetailsOpened,
   projects,
   projectIndex,
+  setProjectIndex,
 }) => {
   const heroImages = [manageHero, bookmarkHero, insureHero, fyloHero];
   const preview1 = [
@@ -33,6 +34,14 @@ const ProjectDetails: React.FC<Props> = ({
     insurePreview2,
     fyloPreview2,
   ];
+  const handleClickPrevious = () => {
+    if (projectIndex > 0) setProjectIndex(projectIndex + 1);
+    if (projectIndex === 0) setProjectIndex(data.length - 1);
+  };
+  const handleClickNext = () => {
+    if (projectIndex < data.length - 1) setProjectIndex(projectIndex + 1);
+    if (projectIndex === data.length - 1) setProjectIndex(0);
+  };
   return (
     <>
       <main className="flex flex-col items-center w-10/12">
@@ -82,7 +91,10 @@ const ProjectDetails: React.FC<Props> = ({
         </section>
       </main>
       <div className="flex flex-row w-[20.375rem] h-[9.125rem] border-t border-b border-dark-blue mb-16">
-        <button className="w-1/2 h-full flex flex-col justify-center items-start border-r border-dark-blue">
+        <button
+          className="w-1/2 h-full flex flex-col justify-center items-start border-r border-dark-blue"
+          onClick={() => handleClickPrevious()}
+        >
           <img src={arrowLeft} alt="grey arrow to the left" />
           <div className="mt-4">
             <h3 className="text-h3-mobile-btn text-dark-blue font-serif text-left">
@@ -95,7 +107,10 @@ const ProjectDetails: React.FC<Props> = ({
             </p>
           </div>
         </button>
-        <button className="w-1/2 h-full flex flex-col justify-center items-end">
+        <button
+          className="w-1/2 h-full flex flex-col justify-center items-end"
+          onClick={() => handleClickNext()}
+        >
           <img src={arrowRight} alt="grey arrow to the right" />
           <div className="mt-4">
             <h3 className="text-h3-mobile-btn text-dark-blue font-serif text-right">
