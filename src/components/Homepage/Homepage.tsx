@@ -1,16 +1,10 @@
-import imageHomepage from "../../../assets/images/homepage/mobile/image-homepage-hero.jpg";
-import data from "../../../assets/data.json";
-import downArrows from "../../../assets/images/icons/down-arrows.svg";
-import imageProfile from "../../../assets/images/homepage/mobile/image-homepage-profile.jpg";
+import imageHomepage from "../../assets/images/homepage/mobile/image-homepage-hero.jpg";
+import data from "../../assets/data.json";
+import downArrows from "../../assets/images/icons/down-arrows.svg";
+import imageProfile from "../../assets/images/homepage/mobile/image-homepage-profile.jpg";
+import { Link } from "react-router-dom";
 
-interface Props {
-  setProjectIndexOpened: React.Dispatch<React.SetStateAction<boolean>>;
-}
-
-const Homepage: React.FC<Props> = ({ setProjectIndexOpened }) => {
-  const handleClickPortfolio = () => {
-    setProjectIndexOpened(true);
-  };
+const Homepage: React.FC = () => {
   return (
     <main className="flex flex-col items-center w-10/12 mb-[7.1875rem]">
       <section className="w-full flex flex-col ">
@@ -39,12 +33,11 @@ const Homepage: React.FC<Props> = ({ setProjectIndexOpened }) => {
           <p className="mt-7 opacity-p text-p text-dark-blue">
             {data.description}
           </p>
-          <button
-            className="border w-btn h-12 mt-6 btn-text-black"
-            onClick={handleClickPortfolio}
-          >
-            GO TO PORTFOLIO
-          </button>
+          <Link to="portfolio">
+            <button className="border w-btn h-12 mt-6 btn-text-black">
+              GO TO PORTFOLIO
+            </button>
+          </Link>
         </div>
       </article>
     </main>

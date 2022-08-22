@@ -1,22 +1,16 @@
-import data from "../../../assets/portfolio-index.json";
-import bookmarkImage from "../../../assets/images/portfolio/mobile/image-portfolio-bookmark.jpg";
-import manageImage from "../../../assets/images/portfolio/mobile/image-portfolio-manage.jpg";
-import fyloImage from "../../../assets/images/portfolio/mobile/image-portfolio-fylo.jpg";
-import insureImage from "../../../assets/images/portfolio/mobile/image-portfolio-insure.jpg";
+import data from "../../assets/portfolio-index.json";
+import bookmarkImage from "../../assets/images/portfolio/mobile/image-portfolio-bookmark.jpg";
+import manageImage from "../../assets/images/portfolio/mobile/image-portfolio-manage.jpg";
+import fyloImage from "../../assets/images/portfolio/mobile/image-portfolio-fylo.jpg";
+import insureImage from "../../assets/images/portfolio/mobile/image-portfolio-insure.jpg";
 import Props from "./Type";
+import { Link } from "react-router-dom";
 
-const PortfolioIndex: React.FC<Props> = ({
-  setProjects,
-  setProjectIndex,
-  setProjectDetailsOpened,
-  setProjectIndexOpened,
-}) => {
+const PortfolioIndex: React.FC<Props> = ({ setProjects, setProjectIndex }) => {
   const images = [manageImage, bookmarkImage, insureImage, fyloImage];
   const handleClickProject = (index: number) => {
     setProjects([...images]);
     setProjectIndex(index);
-    setProjectDetailsOpened(true);
-    setProjectIndexOpened(false);
   };
 
   return (
@@ -31,12 +25,14 @@ const PortfolioIndex: React.FC<Props> = ({
             <p className="text-p2 text-dark-blue opacity-p">
               {project["project-description"]}
             </p>
-            <button
-              className="border w-btn h-12 btn-text-black"
-              onClick={() => handleClickProject(index)}
-            >
-              VIEW PROJECT
-            </button>
+            <Link to={project["project-name"]}>
+              <button
+                className="border w-btn h-12 btn-text-black"
+                onClick={() => handleClickProject(index)}
+              >
+                VIEW PROJECT
+              </button>
+            </Link>
           </div>
         </article>
       ))}

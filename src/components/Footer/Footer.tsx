@@ -3,6 +3,7 @@ import github from "../../assets/images/icons/github.svg";
 import linkedin from "../../assets/images/icons/linkedin.svg";
 import twitter from "../../assets/images/icons/twitter.svg";
 import data from "../../assets/data.json";
+import { Link } from "react-router-dom";
 
 const Footer: React.FC = () => {
   return (
@@ -25,13 +26,13 @@ const Footer: React.FC = () => {
           <nav className="text-center w-[6.125rem] h-[6.625rem] mb-[2.5625rem]">
             <ul className="flex flex-col justify-between h-full text-btn text-white">
               <li>
-                <a>HOME</a>
+                <Link to="/">HOME</Link>
               </li>
               <li>
-                <a>PORTFOLIO</a>
+                <Link to="portfolio">PORTFOLIO</Link>
               </li>
               <li>
-                <a>CONTACT ME</a>
+                <Link to="/contact-me">CONTACT ME</Link>
               </li>
             </ul>
           </nav>
