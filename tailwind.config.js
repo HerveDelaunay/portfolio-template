@@ -45,11 +45,26 @@ module.exports = {
       }],
       'p': ['1rem', {
         lineHeight: '1.875rem',
+      }],
+      'p2': ['0.9375rem', {
+        lineHeight: '1.875rem',
+      }],
+      'techno': ['0.8125rem', {
+        lineHeight: '1.875rem',
+      }],
+      'h3-mobile': ['2rem', {
+        letterSpacing: '-0.29px',
+        lineHeight: '2.625rem',
+      }],
+      'h3-mobile-btn': ['2rem', {
+        letterSpacing: '-0.29px',
+        lineHeight: '2.25rem',
       }]
     },
     opacity: {
       '15': '.15',
-      'p': '.8'
+      'p': '.8',
+      'p-mobile-btn': '.5'
     }
   },
   plugins: [],
