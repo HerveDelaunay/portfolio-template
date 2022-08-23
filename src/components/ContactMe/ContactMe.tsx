@@ -1,9 +1,33 @@
+import { useState } from "react";
 import data from "../../assets/contact.json";
 import githubIcon from "../../assets/images/icons/github_black.svg";
-import twitterIcon from "../../assets/images/icons/twitter_black.svg";
 import linkedinIcon from "../../assets/images/icons/linkedin_black.svg";
+import twitterIcon from "../../assets/images/icons/twitter_black.svg";
 
 const ContactMe: React.FC = () => {
+  const [isEmpty, setIsEmpty] = useState<boolean>(false);
+  const [nameIsEmpty, setNameIsEmpty] = useState<boolean>(false);
+  const [emailIsEmpty, setEmailIsEmpty] = useState(false);
+  const [textAreaContent, setTextAreaContent] = useState<string>("");
+  const [nameContent, setNameContent] = useState<string>("");
+  const [emailContent, setEmailContent] = useState<string>("");
+  const handleFormSubmit = () => {
+    if (textAreaContent === "") {
+      setIsEmpty(true);
+    } else {
+      setIsEmpty(false);
+    }
+    if (nameContent === "") {
+      setNameIsEmpty(true);
+    } else {
+      setNameIsEmpty(false);
+    }
+    if (emailContent === "") {
+      setEmailIsEmpty(true);
+    } else {
+      setEmailIsEmpty(false);
+    }
+  };
   return (
     <div className="flex flex-col items-center w-10/12">
       <div className="w-full h-[33.125rem] border-t border-b border-opacity">
@@ -40,9 +64,17 @@ const ContactMe: React.FC = () => {
             <input
               type="text"
               id="name"
-              className="bg-[#979797] bg-opacity-[0.1] h-12 placeholder:text-dark-blue/0.4 pl-4 "
+              required={nameIsEmpty}
+              className="bg-dark-blue bg-opacity-[0.1] h-12 placeholder:text-dark-blue/0.4 
+              placeholder:text-techno px-4 focus:outline-none focus:border focus:border-cyan"
               placeholder="Jane Appleseed"
+              onChange={(e) => setNameContent(e.target.value)}
             />
+            {nameIsEmpty && (
+              <p className="text-[0.625rem] font-bold font-sans text-red mt-1">
+                This field is required
+              </p>
+            )}
           </div>
           <div className="flex flex-col justify-between h-[5.375rem]">
             <label
@@ -54,9 +86,17 @@ const ContactMe: React.FC = () => {
             <input
               type="email"
               id="email"
-              className="bg-[#979797] bg-opacity-[0.1] h-12 placeholder:text-dark-blue/0.4 pl-4 "
+              required={emailIsEmpty}
+              className="bg-dark-blue bg-opacity-[0.1] h-12 placeholder:text-dark-blue/0.4 
+              placeholder:text-techno px-4 focus:outline-none focus:border focus:border-cyan"
               placeholder="email@example.com"
+              onChange={(e) => setEmailContent(e.target.value)}
             />
+            {emailIsEmpty && (
+              <p className="text-[0.625rem] font-bold font-sans text-red mt-1">
+                This field is required
+              </p>
+            )}
           </div>
           <div className="flex flex-col justify-between h-[8.375rem]">
             <label
@@ -65,15 +105,28 @@ const ContactMe: React.FC = () => {
             >
               Message
             </label>
-            <input
-              type="text"
+            <textarea
               id="message"
-              className=" h-24 bg-[#979797] bg-opacity-[0.1] placeholder:text-dark-blue/0.4 pl-4 align-text-top"
+              className=" h-24 bg-dark-blue bg-opacity-[0.1] placeholder:text-dark-blue/0.4 
+              placeholder:text-techno px-4 focus:outline-none focus:border focus:border-cyan pt-2 resize-none required:border required:border-red peer"
               placeholder="How can I help?"
+              required={isEmpty}
+              onChange={(e) => setTextAreaContent(e.target.value)}
             />
+            {isEmpty && (
+              <p className="text-[0.625rem] font-bold font-sans text-red mt-1">
+                This field is required
+              </p>
+            )}
           </div>
-          <button className="w-[12.5rem] h-12 bg-blue text-white text-btn">
-            SEND A MESSAGE
+          <button
+            className="w-[12.5rem] h-12 bg-blue text-white text-btn"
+            onClick={(e) => {
+              e.preventDefault();
+              handleFormSubmit();
+            }}
+          >
+            SEND MESSAGE
           </button>
         </form>
       </section>
