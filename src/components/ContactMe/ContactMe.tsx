@@ -66,7 +66,7 @@ const ContactMe: React.FC = () => {
               id="name"
               required={nameIsEmpty}
               className="bg-dark-blue bg-opacity-[0.1] h-12 placeholder:text-dark-blue/0.4 
-              placeholder:text-techno px-4 focus:outline-none focus:border focus:border-cyan"
+              placeholder:text-techno px-4 focus:outline-none focus:border focus:border-cyan required:border required:border-red"
               placeholder="Jane Appleseed"
               onChange={(e) => setNameContent(e.target.value)}
             />
@@ -88,7 +88,7 @@ const ContactMe: React.FC = () => {
               id="email"
               required={emailIsEmpty}
               className="bg-dark-blue bg-opacity-[0.1] h-12 placeholder:text-dark-blue/0.4 
-              placeholder:text-techno px-4 focus:outline-none focus:border focus:border-cyan"
+              placeholder:text-techno px-4 focus:outline-none focus:border focus:border-cyan required:border required:border-red"
               placeholder="email@example.com"
               onChange={(e) => setEmailContent(e.target.value)}
             />
@@ -108,7 +108,7 @@ const ContactMe: React.FC = () => {
             <textarea
               id="message"
               className=" h-24 bg-dark-blue bg-opacity-[0.1] placeholder:text-dark-blue/0.4 
-              placeholder:text-techno px-4 focus:outline-none focus:border focus:border-cyan pt-2 resize-none required:border required:border-red peer"
+              placeholder:text-techno px-4 focus:outline-none focus:border focus:border-cyan pt-2 resize-none required:border required:border-red"
               placeholder="How can I help?"
               required={isEmpty}
               onChange={(e) => setTextAreaContent(e.target.value)}

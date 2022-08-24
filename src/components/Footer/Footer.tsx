@@ -13,9 +13,11 @@ const Footer: React.FC = () => {
           <h2 className="text-h2 font-bold font-serif text-center h-[7.875rem] text-dark-blue">
             {data["contact me"]}
           </h2>
-          <button className="w-[10.125rem] h-12 border text-btn text-dark-blue">
-            CONTACT ME
-          </button>
+          <Link to="contact-me">
+            <button className="w-[10.125rem] h-12 border text-btn text-dark-blue">
+              CONTACT ME
+            </button>
+          </Link>
         </section>
       )}
       <div className="w-full h-[22.125rem] flex justify-center items-center bg-dark-blue">
