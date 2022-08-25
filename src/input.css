@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer components {
+  .btn1 {
+    background-color: #203A4C;
+  }
+  .btn2 {
+    background-color: #000000;
+    opacity: 0.1;
+    mix-blend-mode: normal;
+  }
+  .btn-text {
+    font-size: 0.75rem;
+    line-height: 0.875rem;
+    letter-spacing: 0.125rem;
+    color: #FFFFFF;
+  }
+  .btn-text-black {
+    font-size: 0.75rem;
+    line-height: 0.875rem;
+    letter-spacing: 0.125rem;
+    color: #33323D;
+  }
+  .border-opacity {
+    border-color: rgba(51, 50, 61, 0.15)
+  }
+};
