@@ -1,4 +1,5 @@
 import data from "../../assets/projectDetailData.json";
+import contactData from "../../assets/data.json";
 import projectIndexData from "../../assets/portfolio-index.json";
 import Props from "./Type";
 import bookmarkHero from "../../assets/images/detail/mobile/image-bookmark-hero.jpg";
@@ -133,6 +134,16 @@ const ProjectDetails: React.FC<Props> = ({
           </div>
         </Link>
       </div>
+      <section className=" mb-20 w-10/12 h-[13.375rem] flex flex-col justify-between items-center">
+        <h2 className="text-h2 font-bold font-serif text-center h-[7.875rem] text-dark-blue">
+          {contactData["contact me"]}
+        </h2>
+        <Link to="/contact-me">
+          <button className="w-[10.125rem] h-12 border text-btn text-dark-blue">
+            CONTACT ME
+          </button>
+        </Link>
+      </section>
     </>
   );
 };

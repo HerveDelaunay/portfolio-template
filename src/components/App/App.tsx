@@ -12,6 +12,7 @@ const App: React.FC = () => {
   const [projects, setProjects] = useState<string[]>([]);
   const [projectIndex, setProjectIndex] = useState<number>(0);
   const [mobileMenuOpened, setMobileMenuOpened] = useState<boolean>(false);
+
   return (
     <div className="flex flex-col items-center w-full">
       <Header
