@@ -17,7 +17,7 @@ const Homepage: React.FC = () => {
   };
   return (
     <>
-      <main className="flex flex-col items-center w-10/12 tablet:w-[689px]">
+      <main className="flex flex-col items-center w-10/12 tablet:w-[689px] tablet:mt-[2.9375rem]">
         <section className="w-full flex flex-col tablet:relative tablet:h-[600px] tablet:mb-[96px]">
           <img
             src={imageHomepage}
@@ -84,6 +84,7 @@ const Homepage: React.FC = () => {
           <h2 className="text-h2 font-bold font-serif text-center h-[7.875rem] text-dark-blue tablet:w-[350px] tablet:h-[84px]">
             {data["contact me"]}
           </h2>
+          <span className="max-tablet:hidden w-[113px] h-[1px] bg-dark-blue/15"></span>
           <Link to="contact-me">
             <button className="w-[10.125rem] h-12 border text-btn text-dark-blue">
               CONTACT ME
