@@ -27,10 +27,16 @@ const Footer: React.FC = () => {
             </li>
           </ul>
         </nav>
-        <nav className="w-[6.5rem] h-6 flex justify-between">
-          <img src={github} alt="github-icon" />
-          <img src={twitter} alt="twitter-icon" />
-          <img src={linkedin} alt="linkedin-logo" />
+        <nav className="w-[6.5rem] h-6 flex justify-between items-center">
+          <a href="https://github.com">
+            <img src={github} alt="github-icon" />
+          </a>
+          <a href="https://twitter.com">
+            <img src={twitter} alt="twitter-icon" />
+          </a>
+          <a href="https://linkedin.com">
+            <img src={linkedin} alt="linkedin-logo" />
+          </a>
         </nav>
       </section>
     </div>

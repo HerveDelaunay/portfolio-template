@@ -39,9 +39,15 @@ const ContactMe: React.FC = () => {
             {data.description}
           </p>
           <div className="flex justify-between items-center h-6 w-[6.5rem]">
-            <img src={githubIcon} alt="github website small icon" />
-            <img src={twitterIcon} alt="twitter website small icon" />
-            <img src={linkedinIcon} alt="linkedin website small icon" />
+            <a href="https://github.com">
+              <img src={githubIcon} alt="github website small icon" />
+            </a>
+            <a href="https://twitter.com">
+              <img src={twitterIcon} alt="twitter website small icon" />
+            </a>
+            <a href="https://linkedin.com">
+              <img src={linkedinIcon} alt="linkedin website small icon" />
+            </a>
           </div>
         </section>
       </div>
