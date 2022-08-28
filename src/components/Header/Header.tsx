@@ -48,7 +48,10 @@ const Header: React.FC<Props> = ({
   }, [location]);
 
   return (
-    <section className="flex flex-row justify-between items-center mt-8 mb-10 w-full tablet:w-[689px] tablet:mt-16 tablet:mb-0">
+    <section
+      className="flex flex-row justify-between items-center mt-8 mb-10 w-full 
+    tablet:w-[689px] tablet:mt-16 tablet:mb-0 desktop:w-[1111px]"
+    >
       <img src={logo} className="ml-8 tablet:ml-0" />
       <img
         src={hamburger}

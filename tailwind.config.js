@@ -63,6 +63,10 @@ module.exports = {
       'link-tablet': ['0.75rem', {
         letterSpacing: '0.125rem',
         lineHeight: '0.0625rem',
+      }],
+      'h2-desktop': ['3.125rem', {
+        letterSpacing: '-0.028125rem',
+        lineHeight: '3.125rem',
       }]
     },
     opacity: {
@@ -72,9 +76,10 @@ module.exports = {
     }, 
     screens: {
       'tablet': '689px',
-      'desktop': '1449px',
+      'desktop': '1440px',
       'mobile': '375px',
       'max-tablet': {'max': '688px'},
+      'max-desktop': {'max': '1440px'},
     },
   },
   plugins: [],

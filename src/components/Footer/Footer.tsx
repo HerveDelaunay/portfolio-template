@@ -8,8 +8,14 @@ import logo from "../../assets/images/logo-white.svg";
 const Footer: React.FC = () => {
   return (
     <div className="w-full h-[22.125rem] flex justify-center items-center bg-dark-blue tablet:h-[80px]">
-      <section className="w-[6.5rem] h-[15.125rem] flex flex-col items-center tablet:flex-row tablet:w-full tablet:justify-between tablet:h-full">
-        <div className="flex flex-col items-center tablet:flex-row tablet:ml-[39px] tablet:justify-between tablet:w-[418px] tablet:h-full">
+      <section
+        className="w-[6.5rem] h-[15.125rem] flex flex-col items-center tablet:flex-row tablet:w-full 
+        tablet:justify-between tablet:h-full desktop:w-[1110px]"
+      >
+        <div
+          className="flex flex-col items-center tablet:flex-row tablet:ml-[39px] tablet:justify-between tablet:w-[418px] 
+          tablet:h-full desktop:w-[418px] desktop:justify-between desktop:ml-0"
+        >
           <img
             src={logo}
             alt="website-logo"
@@ -29,7 +35,7 @@ const Footer: React.FC = () => {
             </ul>
           </nav>
         </div>
-        <nav className="w-[6.5rem] h-6 flex justify-between items-center tablet:mr-[40px]">
+        <nav className="w-[6.5rem] h-6 flex justify-between items-center tablet:mr-[40px] desktop:mr-0">
           <a href="https://github.com">
             <img src={github} alt="github-icon" />
           </a>
