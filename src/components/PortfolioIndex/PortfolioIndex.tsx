@@ -10,6 +10,7 @@ import fyloImageTablet from "../../assets/images/portfolio/tablet/image-portfoli
 import insureImageTablet from "../../assets/images/portfolio/tablet/image-portfolio-insure.jpg";
 import Props from "./Type";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
 const PortfolioIndex: React.FC<Props> = ({ setProjects, setProjectIndex }) => {
   const images = [manageImage, bookmarkImage, insureImage, fyloImage];
@@ -69,7 +70,7 @@ const PortfolioIndex: React.FC<Props> = ({ setProjects, setProjectIndex }) => {
             {contactData["contact me"]}
           </h2>
           <span className="max-tablet:hidden w-[113px] h-[1px] bg-dark-blue/15"></span>
-          <Link to="contact-me">
+          <Link to="/contact-me">
             <button className="w-[10.125rem] h-12 border text-btn text-dark-blue">
               CONTACT ME
             </button>

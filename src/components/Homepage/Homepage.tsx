@@ -5,7 +5,7 @@ import downArrows from "../../assets/images/icons/down-arrows.svg";
 import imageProfile from "../../assets/images/homepage/mobile/image-homepage-profile.jpg";
 import imageProfileTablet from "../../assets/images/homepage/tablet/image-homepage-profile.jpg";
 import { Link } from "react-router-dom";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 
 const Homepage: React.FC = () => {
   const aboutMe = useRef<HTMLElement>(null);
@@ -85,7 +85,7 @@ const Homepage: React.FC = () => {
             {data["contact me"]}
           </h2>
           <span className="max-tablet:hidden w-[113px] h-[1px] bg-dark-blue/15"></span>
-          <Link to="contact-me">
+          <Link to="/contact-me">
             <button className="w-[10.125rem] h-12 border text-btn text-dark-blue">
               CONTACT ME
             </button>

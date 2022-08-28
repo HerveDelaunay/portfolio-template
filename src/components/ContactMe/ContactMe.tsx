@@ -29,9 +29,9 @@ const ContactMe: React.FC = () => {
     }
   };
   return (
-    <div className="flex flex-col items-center w-10/12">
-      <div className="w-full h-[33.125rem] border-t border-b border-opacity">
-        <section className="h-[29.625rem] w-full flex flex-col justify-between mt-6">
+    <div className="flex flex-col items-center w-10/12 tablet:w-[689px] tablet:mt-[94px]">
+      <div className="w-full h-[33.125rem] border-t border-b border-opacity tablet:h-[358px]">
+        <section className="h-[29.625rem] w-full flex flex-col justify-between mt-6 tablet:h-[294px]">
           <h2 className="text-h2 text-dark-blue font-bold font-serif">
             Get in Touch
           </h2>
@@ -52,12 +52,15 @@ const ContactMe: React.FC = () => {
         </section>
       </div>
       <section className="w-full h-[30.75rem] mt-8 mb-20">
+        <h2 className="text-h2 text-dark-blue font-bold font-serif max-tablet:hidden">
+          Contact Me
+        </h2>
         <form
           action="#"
           method="post"
-          className="h-full flex flex-col justify-between"
+          className="h-full flex flex-col justify-between tablet:w-full tablet:h-[426px] tablet:mt-8 tablet:mb-24"
         >
-          <h2 className="text-h2 text-dark-blue font-bold font-serif">
+          <h2 className="text-h2 text-dark-blue font-bold font-serif tablet:hidden">
             Contact Me
           </h2>
           <div className="flex flex-col justify-between h-[5.375rem]">
