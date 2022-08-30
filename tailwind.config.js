@@ -76,10 +76,10 @@ module.exports = {
     }, 
     screens: {
       'tablet': '689px',
-      'desktop': '1440px',
+      'desktop': '1439px',
       'mobile': '375px',
       'max-tablet': {'max': '688px'},
-      'max-desktop': {'max': '1440px'},
+      'max-desktop': {'max': '1439px'},
     },
   },
   plugins: [],

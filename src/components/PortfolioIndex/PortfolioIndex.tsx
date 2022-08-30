@@ -42,7 +42,7 @@ const PortfolioIndex: React.FC<Props> = ({ setProjects, setProjectIndex }) => {
       >
         {data.map((project, index) => (
           <article
-            className={`w-full mb-[4.5rem] tablet:h-[418px] tablet:mb-0 tablet:flex tablet:flex-row tablet:items-center 
+            className={`w-full mb-20 tablet:h-[418px] tablet:mb-0 tablet:flex tablet:flex-row tablet:items-center 
               tablet:justify-between desktop:w-[1015px] desktop:h-[500px]
               ${index % 2 === 0 ? "desktop:self-start" : "desktop:self-end"}`}
             key={index}
@@ -78,7 +78,7 @@ const PortfolioIndex: React.FC<Props> = ({ setProjects, setProjectIndex }) => {
               </p>
               <Link to={project["project-name"]}>
                 <button
-                  className="border w-btn h-12 btn-text-black tablet:mt-[35px] desktop:mt-6"
+                  className="border border-dark-blue w-btn h-12 btn-text-black tablet:mt-[35px] desktop:mt-6 desktop:hover:bg-dark-blue desktop:hover:text-white"
                   onClick={() => handleClickProject(index)}
                 >
                   VIEW PROJECT
@@ -89,19 +89,19 @@ const PortfolioIndex: React.FC<Props> = ({ setProjects, setProjectIndex }) => {
         ))}
       </main>
       <div
-        className="w-full h-[25.5625rem] flex justify-center tablet:w-[689px] tablet:h-[84px] tablet:my-[96px] 
-        desktop:my-[150px] desktop:w-[1110px]"
+        className="w-full flex justify-center tablet:w-[689px] tablet:h-[84px] tablet:mb-[96px] tablet:mt-[80px] 
+          desktop:mb-[150px] desktop:mt-[115px] desktop:w-[1110px]"
       >
         <section
-          className="w-10/12 h-[13.375rem] flex flex-col justify-between items-center mt-[7.1875rem] tablet:mt-0 
-          tablet:flex-row tablet:items-center tablet:w-full tablet:h-[84px] desktop:w-full"
+          className="w-10/12 h-[13.375rem] flex flex-col justify-between items-center mb-20 tablet:mt-0 
+            tablet:flex-row tablet:items-center tablet:w-full tablet:h-[84px] tablet:mb-0 desktop:mb-0 desktop:w-full"
         >
           <h2 className="text-h2 font-bold font-serif text-center h-[7.875rem] text-dark-blue tablet:w-[350px] tablet:h-[84px]">
             {contactData["contact me"]}
           </h2>
           <span className="max-tablet:hidden w-[113px] h-[1px] bg-dark-blue/15 desktop:w-[534px]"></span>
           <Link to="/contact-me">
-            <button className="w-[10.125rem] h-12 border text-btn text-dark-blue">
+            <button className="w-[10.125rem] h-12 border border-dark-blue text-btn text-dark-blue desktop:hover:bg-dark-blue desktop:hover:text-white">
               CONTACT ME
             </button>
           </Link>

@@ -10,6 +10,12 @@
     opacity: 0.1;
     mix-blend-mode: normal;
   }
+  .btn3 {
+    background-color: #5FB4A2;
+  }
+  .btn4 {
+    background-color: #EAEAEB;
+  }
   .btn-text {
     font-size: 0.75rem;
     line-height: 0.875rem;
