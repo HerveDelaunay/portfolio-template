@@ -59,13 +59,28 @@ module.exports = {
       'h3-mobile-btn': ['2rem', {
         letterSpacing: '-0.29px',
         lineHeight: '2.25rem',
+      }],
+      'link-tablet': ['0.75rem', {
+        letterSpacing: '0.125rem',
+        lineHeight: '0.0625rem',
+      }],
+      'h2-desktop': ['3.125rem', {
+        letterSpacing: '-0.028125rem',
+        lineHeight: '3.125rem',
       }]
     },
     opacity: {
       '15': '.15',
       'p': '.8',
       'p-mobile-btn': '.5'
-    }
+    }, 
+    screens: {
+      'tablet': '689px',
+      'desktop': '1439px',
+      'mobile': '375px',
+      'max-tablet': {'max': '688px'},
+      'max-desktop': {'max': '1439px'},
+    },
   },
   plugins: [],
 }
