@@ -73,7 +73,3 @@ open http://localhost:3000
 When I implemented React router in my project I quickly came across an issue : when changing routes the browser didn't scroll to the top of the page automatically, in the contrary it stayed at the same place where I was on the previous page.
 
 ### Continued development
-
-I witnessed some issues concerning the routing of the website. I also witnessed that the website doesn't display properly on laptop screensizes, it is due to the font-size that is not adaptating to the loss of screen size and also to the absolute position of some elements.
-
-I will try to fix all of these in the near future.

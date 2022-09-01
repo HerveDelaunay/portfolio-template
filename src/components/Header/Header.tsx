@@ -1,20 +1,10 @@
-import React, { useState, useEffect } from "react";
-import { Link, useLocation, useParams } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import hamburger from "../../assets/images/icons/hamburger.svg";
 import logo from "../../assets/images/logo.svg";
 import Props from "./Type";
 
-const Header: React.FC<Props> = ({
-  setMobileMenuOpened,
-  mobileMenuOpened,
-  // homeLinkActive,
-  // setHomeLinkActive,
-  // contactMeLinkActive,
-  // setContactMeLinkActive,
-  // portfolioLinkActive,
-  // setPortfolioLinkActive,
-  // slug,
-}) => {
+const Header: React.FC<Props> = ({ setMobileMenuOpened, mobileMenuOpened }) => {
   const [homeLinkActive, setHomeLinkActive] = useState(false);
   const [portfolioLinkActive, setPortfolioLinkActive] = useState(false);
   const [contactMeLinkActive, setContactMeLinkActive] = useState(false);
@@ -42,7 +32,7 @@ const Header: React.FC<Props> = ({
       return;
     }
   };
-  //have to get rid of the active animation on the header's links (blue square)
+
   useEffect(() => {
     handleClickTabletMenu();
   }, [location]);

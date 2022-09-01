@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import data from "../../assets/data.json";
 import github from "../../assets/images/icons/github.svg";
 import linkedin from "../../assets/images/icons/linkedin.svg";
 import twitter from "../../assets/images/icons/twitter.svg";

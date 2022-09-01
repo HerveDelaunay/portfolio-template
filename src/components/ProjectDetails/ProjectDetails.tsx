@@ -169,11 +169,32 @@ const ProjectDetails: React.FC<Props> = ({
               <img
                 src={preview1Desktop[projectIndex]}
                 alt="first static preview of the projet"
-                className="mb-8"
+                className="mb-8 max-desktop:hidden"
               />
               <img
                 src={preview2Desktop[projectIndex]}
                 alt="second static preview of the projet"
+                className="max-desktop:hidden"
+              />
+              <img
+                src={preview1Tablet[projectIndex]}
+                alt="first static preview of the projet"
+                className="mb-8 max-tablet:hidden desktop:hidden"
+              />
+              <img
+                src={preview2Tablet[projectIndex]}
+                alt="second static preview of the projet"
+                className="max-tablet:hidden desktop:hidden"
+              />
+              <img
+                src={preview1[projectIndex]}
+                alt="first static preview of the projet"
+                className="mb-8 tablet:hidden"
+              />
+              <img
+                src={preview2[projectIndex]}
+                alt="second static preview of the projet"
+                className="tablet:hidden"
               />
             </section>
           </div>
