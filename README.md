@@ -147,8 +147,8 @@ In the case of this project there is clearly no real advantage in using nesting 
 
 An other issue that I had was that I had trouble to change the color of the arrows in the About me button of the homepage. These arrows are in SVG format, and I wanted to change their colors on hover. I learned that there are three ways of displaying SVGs :
 
-- Pasting the SVG code between <svg> tags.
-- Importing the SVG and paste its name in the source tag of an image.
+- Pasting the SVG code between svg tags.
+- Importing the SVG and pasting its name in the source attribute of an image.
 - Creating a functional component which returns the SVG.
 
 The third solution is really flexible, because you can pass different props to the SVG component depending on the context :
