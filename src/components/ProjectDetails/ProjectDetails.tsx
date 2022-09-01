@@ -43,11 +43,7 @@ import arrowRight from "../../assets/images/icons/arrow-right.svg";
 import { useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 
-const ProjectDetails: React.FC<Props> = ({
-  projects,
-  projectIndex,
-  setProjectIndex,
-}) => {
+const ProjectDetails: React.FC<Props> = ({ projectIndex, setProjectIndex }) => {
   const heroImages = [manageHero, bookmarkHero, insureHero, fyloHero];
   const heroImagesTablet = [
     manageHeroTablet,

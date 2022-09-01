@@ -15,7 +15,7 @@ import manageImageTablet from "../../assets/images/portfolio/tablet/image-portfo
 import data from "../../assets/portfolio-index.json";
 import Props from "./Type";
 
-const PortfolioIndex: React.FC<Props> = ({ setProjects, setProjectIndex }) => {
+const PortfolioIndex: React.FC<Props> = ({ setProjectIndex }) => {
   const images = [manageImage, bookmarkImage, insureImage, fyloImage];
   const imagesTablet = [
     manageImageTablet,
@@ -30,7 +30,6 @@ const PortfolioIndex: React.FC<Props> = ({ setProjects, setProjectIndex }) => {
     fyloImageDesktop,
   ];
   const handleClickProject = (index: number) => {
-    setProjects([...images]);
     setProjectIndex(index);
   };
 

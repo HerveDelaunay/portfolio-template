@@ -9,7 +9,6 @@ import PortfolioIndex from "../PortfolioIndex/PortfolioIndex";
 import ProjectDetails from "../ProjectDetails/ProjectDetails";
 
 const App: React.FC = () => {
-  const [projects, setProjects] = useState<string[]>([]);
   const [projectIndex, setProjectIndex] = useState<number>(0);
   const [mobileMenuOpened, setMobileMenuOpened] = useState<boolean>(false);
 
@@ -27,18 +26,12 @@ const App: React.FC = () => {
         <Route path="portfolio">
           <Route
             index
-            element={
-              <PortfolioIndex
-                setProjects={setProjects}
-                setProjectIndex={setProjectIndex}
-              />
-            }
+            element={<PortfolioIndex setProjectIndex={setProjectIndex} />}
           />
           <Route
             path=":slug"
             element={
               <ProjectDetails
-                projects={projects}
                 projectIndex={projectIndex}
                 setProjectIndex={setProjectIndex}
               />
