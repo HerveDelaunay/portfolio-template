@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { Route, Routes, useParams } from "react-router-dom";
+import React, { useState } from "react";
+import { Route, Routes } from "react-router-dom";
 import ContactMe from "../ContactMe/ContactMe";
 import Footer from "../Footer/Footer";
 import Header from "../Header/Header";

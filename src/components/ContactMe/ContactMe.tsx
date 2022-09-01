@@ -1,40 +1,58 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import data from "../../assets/contact.json";
 import githubIcon from "../../assets/images/icons/github_black.svg";
 import linkedinIcon from "../../assets/images/icons/linkedin_black.svg";
 import twitterIcon from "../../assets/images/icons/twitter_black.svg";
+import FormValuesProps from "./Type";
 
 const ContactMe: React.FC = () => {
-  const [isEmpty, setIsEmpty] = useState<boolean>(false);
-  const [nameIsEmpty, setNameIsEmpty] = useState<boolean>(false);
-  const [emailIsEmpty, setEmailIsEmpty] = useState(false);
-  const [textAreaContent, setTextAreaContent] = useState<string>("");
-  const [nameContent, setNameContent] = useState<string>("");
-  const [emailContent, setEmailContent] = useState<string>("");
-  const [fieldsEmpty, setFieldsEmpty] = useState(true);
-  const handleFormSubmit = () => {
-    if (textAreaContent === "") {
-      setIsEmpty(true);
-    } else {
-      setIsEmpty(false);
-    }
-    if (nameContent === "") {
-      setNameIsEmpty(true);
-    } else {
-      setNameIsEmpty(false);
-    }
-    if (emailContent === "") {
-      setEmailIsEmpty(true);
-    } else {
-      setEmailIsEmpty(false);
-    }
+  const initialValues = { name: "", email: "", message: "" };
+  const [formValues, setFormValues] = useState<FormValuesProps>(initialValues);
+  const [formErrors, setFormErrors] = useState<FormValuesProps>(initialValues);
+  const [isSubmit, setIsSubmit] = useState<boolean>(false);
+  const handleChange = (
+    e:
+      | React.ChangeEvent<HTMLInputElement>
+      | React.ChangeEvent<HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormValues({ ...formValues, [name]: value });
   };
-  const handleOnChange = (number: number) => {
-    if (number === 1) setNameIsEmpty(false);
-    if (number === 2) setEmailIsEmpty(false);
-    if (number === 3) setIsEmpty(false);
-    if (!nameIsEmpty && !emailIsEmpty && !isEmpty) setFieldsEmpty(false);
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setFormErrors(validate(formValues));
+    setIsSubmit(true);
   };
+  const validate = (values: FormValuesProps) => {
+    const errors = {
+      name: "",
+      email: "",
+      message: "",
+    };
+    const regex = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
+    if (!values.name) {
+      errors.name = "A name is required";
+    }
+    if (!values.email) {
+      errors.email = "An email is required";
+    } else if (!regex.test(values.email)) {
+      errors.email = "This is not a valid email format";
+    }
+    if (!values.message) {
+      errors.message = "A message is required";
+    }
+    return errors;
+  };
+  useEffect(() => {
+    if (
+      !formErrors.name &&
+      !formErrors.email &&
+      !formErrors.message &&
+      isSubmit
+    ) {
+      console.log(formValues);
+    }
+  }, [formErrors]);
 
   return (
     <div className="flex flex-col items-center w-10/12 tablet:w-[689px] tablet:mt-[94px] desktop:w-[1110px]">
@@ -80,6 +98,7 @@ const ContactMe: React.FC = () => {
           Contact Me
         </h2>
         <form
+          onSubmit={(e) => handleSubmit(e)}
           action="#"
           method="post"
           className="h-full flex flex-col justify-between tablet:w-full tablet:h-[426px] tablet:mt-8 tablet:mb-24 desktop:w-[635px] desktop:mt-0"
@@ -96,19 +115,17 @@ const ContactMe: React.FC = () => {
             </label>
             <input
               type="text"
-              id="name"
-              required={nameIsEmpty}
+              name="name"
+              required={!formValues.name && isSubmit}
               className="bg-dark-blue bg-opacity-[0.1] h-12 placeholder:text-dark-blue/0.4 
               placeholder:text-techno px-4 focus:outline-none focus:border focus:border-cyan required:border required:border-red"
               placeholder="Jane Appleseed"
-              onChange={(e) => {
-                setNameContent(e.target.value);
-                handleOnChange(1);
-              }}
+              value={formValues.name}
+              onChange={(e) => handleChange(e)}
             />
-            {nameIsEmpty && (
+            {!formValues.name && isSubmit && (
               <p className="text-[0.625rem] font-bold font-sans text-red mt-1">
-                This field is required
+                {formErrors.name}
               </p>
             )}
           </div>
@@ -121,19 +138,17 @@ const ContactMe: React.FC = () => {
             </label>
             <input
               type="email"
-              id="email"
-              required={emailIsEmpty}
+              name="email"
+              required={!formValues.email && isSubmit}
               className="bg-dark-blue bg-opacity-[0.1] h-12 placeholder:text-dark-blue/0.4 
               placeholder:text-techno px-4 focus:outline-none focus:border focus:border-cyan required:border required:border-red"
               placeholder="email@example.com"
-              onChange={(e) => {
-                setEmailContent(e.target.value);
-                handleOnChange(2);
-              }}
+              value={formValues.email}
+              onChange={(e) => handleChange(e)}
             />
-            {emailIsEmpty && (
+            {!formValues.email && isSubmit && (
               <p className="text-[0.625rem] font-bold font-sans text-red mt-1">
-                This field is required
+                {formErrors.email}
               </p>
             )}
           </div>
@@ -145,31 +160,32 @@ const ContactMe: React.FC = () => {
               Message
             </label>
             <textarea
-              id="message"
+              name="message"
               className=" h-24 bg-dark-blue bg-opacity-[0.1] placeholder:text-dark-blue/0.4 
               placeholder:text-techno px-4 focus:outline-none focus:border focus:border-cyan pt-2 resize-none required:border required:border-red"
               placeholder="How can I help?"
-              required={isEmpty}
-              onChange={(e) => {
-                setTextAreaContent(e.target.value);
-                handleOnChange(3);
-              }}
+              required={!formValues.message && isSubmit}
+              value={formValues.message}
+              onChange={(e) => handleChange(e)}
             />
-            {isEmpty && (
+            {!formValues.message && isSubmit && (
               <p className="text-[0.625rem] font-bold font-sans text-red mt-1">
-                This field is required
+                {formErrors.message}
               </p>
             )}
           </div>
           <button
             className={`w-[12.5rem] h-12 bg-white text-dark-blue border border-dark-blue text-btn desktop:hover:bg-blue desktop:hover:border-0 desktop:hover:text-white disabled:bg-white disabled:border-grey disabled:pointer-events-none`}
-            onClick={(e) => {
-              e.preventDefault();
-              handleFormSubmit();
-            }}
-            disabled={fieldsEmpty}
+            disabled={
+              !formValues.name && !formValues.email && !formValues.message
+            }
           >
-            SEND MESSAGE
+            {!formErrors.name &&
+            !formErrors.email &&
+            !formErrors.message &&
+            isSubmit
+              ? " MESSAGE SENT"
+              : "SEND MESSAGE"}
           </button>
         </form>
       </section>

@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import data from "../../assets/data.json";
 import imageHomepageDesktop from "../../assets/images/homepage/desktop/image-homepage-hero.jpg";
