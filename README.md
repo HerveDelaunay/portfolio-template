@@ -17,7 +17,7 @@
 
 This website is a template portfolio website with a minimalist design. It is available on desktop/laptop, tablet and mobile devices.
 
-Check it out here : https://hdln-minimalist-portfolio.surge.sh/
+Check it out here : https://minimalist-portfolio-hdln.surge.sh
 
 What you will find in this project:
 
