@@ -175,7 +175,7 @@ const ContactMe: React.FC = () => {
             )}
           </div>
           <button
-            className={`w-[12.5rem] h-12 bg-white text-dark-blue border border-dark-blue text-btn desktop:hover:bg-blue desktop:hover:border-0 desktop:hover:text-white disabled:bg-white disabled:border-grey disabled:pointer-events-none`}
+            className={`w-[12.5rem] h-12 bg-light-grey text-dark-blue border border-dark-blue text-btn desktop:hover:bg-blue desktop:hover:border-0 desktop:hover:text-white disabled:bg-light-grey disabled:border-grey disabled:pointer-events-none`}
             disabled={
               !formValues.name && !formValues.email && !formValues.message
             }

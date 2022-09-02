@@ -53,7 +53,7 @@ const Homepage: React.FC = () => {
             className="mb-6 max-desktop:hidden desktop:w-[1111px] desktop:h-[600px] desktop:mb-0"
           />
           <div
-            className="tablet:absolute tablet:bg-white tablet:w-[514px] tablet:h-[278px] tablet:top-[323px] tablet:left-[-1px]
+            className="tablet:absolute tablet:bg-light-grey tablet:w-[514px] tablet:h-[278px] tablet:top-[323px] tablet:left-[-1px]
               desktop:w-[445px] desktop:h-[357px] desktop:top-[244px]"
           >
             <h2 className="text-h2 text-dark-blue mb-8 font-serif font-bold tablet:mb-12 tablet:mt-14 desktop:mt-14 desktop:w-[390px] desktop:text-h2-desktop desktop:mb-[53px]">
@@ -83,7 +83,7 @@ const Homepage: React.FC = () => {
           </div>
         </section>
         <article
-          className="w-full border-b border-opacity tablet:flex tablet:justify-between tablet:border-0 tablet:h-[600px]"
+          className="w-full border-b border-opacity tablet:flex tablet:justify-between tablet:border-0 tablet:h-[600px] desktop:w-[1015px] desktop:self-start"
           ref={aboutMe}
         >
           <img

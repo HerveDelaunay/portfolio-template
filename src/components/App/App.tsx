@@ -13,7 +13,7 @@ const App: React.FC = () => {
   const [mobileMenuOpened, setMobileMenuOpened] = useState<boolean>(false);
 
   return (
-    <div className="flex flex-col items-center w-full">
+    <div className="flex flex-col items-center w-full bg-light-grey">
       <Header
         setMobileMenuOpened={setMobileMenuOpened}
         mobileMenuOpened={mobileMenuOpened}
